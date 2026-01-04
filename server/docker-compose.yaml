@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: my-postgres-container
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: mnbvcxz123
+      POSTGRES_DB: zento_db
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    networks:
+      - pg-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: my-pgadmin-container
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: codewithmisu@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: mnbvcxz123
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - pg-network
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+  pgadmin-data:
+
+networks:
+  pg-network:
+    driver: bridge
