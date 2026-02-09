@@ -4,19 +4,20 @@ android-minSdk = "33"
 android-targetSdk = "36"
 
 # Core
-agp = "8.13.2"
-kotlin = "2.3.0"
+agp = "9.1.0-alpha08"
+kotlin = "2.3.10"
 ksp = "2.3.3"
 
 # Lifecyle & Compose
-androidx-activity = "1.12.2"
+androidx-activity = "1.12.3"
 androidx-lifecycle = "2.9.6"
 compose-hotReload = "1.0.0"
-compose-multiplatform = "1.9.3"
+compose-multiplatform = "1.10.0"
+material3 = "1.10.0-alpha05"
 
 # Navigation3
 compose-navigation3 = "1.0.0-alpha06"
-lifecycle-viewmodel-navigation3 = "2.10.0-alpha07"
+lifecycle-viewmodel-navigation3 = "2.10.0-alpha08"
 
 # Room
 room-version = "2.8.4"
@@ -26,10 +27,10 @@ sqlite-version = "2.6.2"
 datastore-version = "1.2.0"
 
 # Koin
-koin-version = "4.2.0-beta2"
+koin-version = "4.2.0-RC1"
 
 # Serialization-Json
-serialization-json = "1.9.0"
+serialization-json = "1.10.0"
 
 # Coroutines
 kotlinx-coroutines = "1.10.2"
@@ -38,20 +39,17 @@ kotlinx-coroutines = "1.10.2"
 coil-version = "3.3.0"
 
 # Ktor Client
-ktor-version = "3.3.3"
+ktor-version = "3.4.0"
 
 # Ktor Server
-ktor-logback = "1.5.23"
-ktor-postgres-sql-driver = "42.7.8"
+ktor-logback = "1.5.28"
+ktor-postgres-sql-driver = "42.7.9"
 ktor-hikari-cp = "7.0.2"
-ktor-exposed-orm = "0.61.0"
-ktor-server-auth = "3.3.3"
+ktor-exposed-orm = "1.0.0"
+ktor-server-auth = "3.4.0"
 
 # Testing
-junit = "4.13.2"
-androidx-espresso = "3.7.0"
-androidx-testExt = "1.3.0"
-mockk = "1.14.7"
+mockk = "1.14.9"
 
 # Bcrypt Hashing
 bcrypt = "0.10.2"
@@ -61,6 +59,15 @@ bcrypt = "0.10.2"
 # Lifecyle & Compose
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "material3" }
+compose-materialIconsExtended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "compose-multiplatform" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-multiplatform" }
+compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "compose-multiplatform" }
+compose-ui-tooling-preview= { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
+compose-components-uiTooling-preview = { module = "org.jetbrains.compose.components.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
+compose-components-resources = { module = "org.jetbrains.compose.components.resources:resources", version.ref = "compose-multiplatform" }
 
 # ViewModels
 androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
@@ -126,20 +133,17 @@ bcrypt-hashing = { module = "at.favre.lib:bcrypt", version.ref = "bcrypt" }
 # Testing
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
-junit = { module = "junit:junit", version.ref = "junit" }
-androidx-testExt-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-testExt" }
-androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espresso" }
 kotlin-mockk = {module = "io.mockk:mockk", version.ref = "mockk"  }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
-androidLibrary = { id = "com.android.library", version.ref = "agp" }
-composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hotReload" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+androidMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hotReload" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor-version" }
 androidx-room = { id = "androidx.room", version.ref = "room-version" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

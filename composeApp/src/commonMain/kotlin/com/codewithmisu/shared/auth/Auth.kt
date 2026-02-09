@@ -1,6 +1,6 @@
-package com.codewithmisu.zento.auth
+package com.codewithmisu.shared.auth
 
-import com.codewithmisu.zento.profile.UserRole
+import com.codewithmisu.shared.profile.UserRole
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

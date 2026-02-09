@@ -25,9 +25,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import com.codewithmisu.shared.auth.SignupRequest
 import com.codewithmisu.zento.components.AppBar
 import com.codewithmisu.zento.components.PrimaryButton
-import com.codewithmisu.zento.profile.UserRole
+import com.codewithmisu.shared.profile.UserRole
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

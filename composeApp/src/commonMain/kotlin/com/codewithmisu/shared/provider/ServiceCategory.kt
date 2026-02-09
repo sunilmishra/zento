@@ -1,4 +1,4 @@
-package com.codewithmisu.zento.provider
+package com.codewithmisu.shared.provider
 
 import kotlinx.serialization.Serializable
 

@@ -1,6 +1,6 @@
-package com.codewithmisu.zento.provider
+package com.codewithmisu.shared.provider
 
-import com.codewithmisu.zento.profile.UserProfile
+import com.codewithmisu.shared.profile.UserProfile
 import kotlinx.serialization.Serializable
 
 @Serializable

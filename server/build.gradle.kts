@@ -38,5 +38,5 @@ dependencies {
     testImplementation(libs.kotlin.testJunit)
     testImplementation(libs.kotlin.mockk)
 
-    implementation(projects.shared)
+    implementation(projects.composeApp)
 }

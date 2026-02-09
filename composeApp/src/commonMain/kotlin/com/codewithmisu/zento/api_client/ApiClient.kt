@@ -1,6 +1,6 @@
 package com.codewithmisu.zento.api_client
 
-import com.codewithmisu.zento.auth.TokenResponse
+import com.codewithmisu.shared.auth.TokenResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.HttpTimeout

@@ -1,4 +1,4 @@
-package com.codewithmisu.zento.profile
+package com.codewithmisu.shared.profile
 
 import kotlinx.serialization.Serializable
 

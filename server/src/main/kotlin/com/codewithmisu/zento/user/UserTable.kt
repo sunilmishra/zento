@@ -25,7 +25,7 @@ object UsersTable : UUIDTable("users_table") {
 }
 
 /**
- * Convert a [ResultRow] to a [UserProfile].
+ * Convert a [ResultRow] to a [com.codewithmisu.shared.profile.UserProfile].
  */
 fun ResultRow.toUserProfile(): UserProfile {
     return UserProfile(

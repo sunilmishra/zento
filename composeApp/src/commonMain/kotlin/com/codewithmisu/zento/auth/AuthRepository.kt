@@ -1,5 +1,11 @@
 package com.codewithmisu.zento.auth
 
+import com.codewithmisu.shared.auth.LoginRequest
+import com.codewithmisu.shared.auth.LoginResponse
+import com.codewithmisu.shared.auth.RefreshTokenRequest
+import com.codewithmisu.shared.auth.SignupRequest
+import com.codewithmisu.shared.auth.SignupResponse
+import com.codewithmisu.shared.auth.TokenResponse
 import com.codewithmisu.zento.api_client.ApiClient
 import com.codewithmisu.zento.api_client.TokenStore
 
