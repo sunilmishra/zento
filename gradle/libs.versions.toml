@@ -14,6 +14,7 @@ androidx-lifecycle = "2.9.6"
 compose-hotReload = "1.0.0"
 compose-multiplatform = "1.10.0"
 material3 = "1.10.0-alpha05"
+material-icons-extended = "1.7.3"
 
 # Navigation3
 compose-navigation3 = "1.0.0-alpha06"
@@ -53,6 +54,10 @@ mockk = "1.14.9"
 
 # Bcrypt Hashing
 bcrypt = "0.10.2"
+kotlinStdlib = "2.3.10"
+runner = "1.7.0"
+core = "1.7.0"
+junit = "1.3.0"
 
 [libraries]
 
@@ -62,12 +67,11 @@ androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "material3" }
-compose-materialIconsExtended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "compose-multiplatform" }
+compose-materialIconsExtended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "material-icons-extended" }
 compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-multiplatform" }
 compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "compose-multiplatform" }
-compose-ui-tooling-preview= { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
-compose-components-uiTooling-preview = { module = "org.jetbrains.compose.components.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
-compose-components-resources = { module = "org.jetbrains.compose.components.resources:resources", version.ref = "compose-multiplatform" }
+compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose-multiplatform" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }
 
 # ViewModels
 androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
@@ -134,6 +138,10 @@ bcrypt-hashing = { module = "at.favre.lib:bcrypt", version.ref = "bcrypt" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 kotlin-mockk = {module = "io.mockk:mockk", version.ref = "mockk"  }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlinStdlib" }
+androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
+androidx-core = { group = "androidx.test", name = "core", version.ref = "core" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -147,3 +155,4 @@ kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", versio
 ktor = { id = "io.ktor.plugin", version.ref = "ktor-version" }
 androidx-room = { id = "androidx.room", version.ref = "room-version" }
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+android-lint = { id = "com.android.lint", version.ref = "agp" }

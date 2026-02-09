@@ -1,11 +1,13 @@
 package com.codewithmisu.zento.provider
 
 import com.codewithmisu.zento.user.UsersTable
-import org.jetbrains.exposed.sql.Table
-import org.jetbrains.exposed.sql.TextColumnType
+import org.jetbrains.exposed.v1.core.Table
+import org.jetbrains.exposed.v1.core.TextColumnType
+import kotlin.uuid.ExperimentalUuidApi
 
+@OptIn(ExperimentalUuidApi::class)
 object ServiceProviderTable : Table("service_providers_table") {
-    val userId = uuid("user_id").references(UsersTable.id)
+    val userId = uuid("user_id")
     val zipcodes = array<String>("service_zipcodes", TextColumnType())
     val categories = array("service_categories", TextColumnType())
     val responseTimeInMinutes = integer("response_time_in_minutes")

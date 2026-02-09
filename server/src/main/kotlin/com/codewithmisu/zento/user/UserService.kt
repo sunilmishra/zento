@@ -1,7 +1,7 @@
 package com.codewithmisu.zento.user
 
-import com.codewithmisu.zento.profile.UserAddress
-import com.codewithmisu.zento.profile.UserProfile
+import com.codewithmisu.shared.profile.UserAddress
+import com.codewithmisu.shared.profile.UserProfile
 import com.codewithmisu.zento.utils.PasswordHasher
 
 class UserService(

@@ -1,12 +1,12 @@
 package com.codewithmisu.zento.user
 
-import com.codewithmisu.zento.profile.UserAddress
-import com.codewithmisu.zento.profile.UserLatLong
-import com.codewithmisu.zento.profile.UserProfile
-import com.codewithmisu.zento.profile.UserRole
+import com.codewithmisu.shared.profile.UserProfile
+import com.codewithmisu.shared.profile.UserAddress
+import com.codewithmisu.shared.profile.UserLatLong
+import com.codewithmisu.shared.profile.UserRole
 import kotlinx.serialization.json.Json
-import org.jetbrains.exposed.dao.id.UUIDTable
-import org.jetbrains.exposed.sql.ResultRow
+import org.jetbrains.exposed.v1.core.ResultRow
+import org.jetbrains.exposed.v1.core.dao.id.java.UUIDTable
 
 object UsersTable : UUIDTable("users_table") {
     val role = enumeration("role", UserRole::class)
