@@ -19,7 +19,7 @@ kotlin {
     }
 
     sourceSets.jvmMain.dependencies {
-        implementation(projects.composeApp)
+        implementation(projects.shared)
         implementation(compose.desktop.currentOs)
         implementation(libs.koin.core)
         implementation(libs.koin.compose)

@@ -13,7 +13,7 @@ kotlin {
     }
 
     dependencies {
-        implementation(projects.composeApp)
+        implementation(projects.shared)
         implementation(libs.androidx.activity.compose)
         implementation(libs.koin.core)
         implementation(libs.koin.compose)
